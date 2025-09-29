@@ -1,11 +1,11 @@
 /* fonts */
 @font-face {
   font-family: 'theatrical';
-  src: url('assets/theatrical.otf') format('opentype');
+  src: url('/assets/theatrical.otf') format('opentype');
 }
 @font-face {
   font-family: 'qanect';
-  src: url('assets/qanect.otf') format('opentype');
+  src: url('/assets/qanect.otf') format('opentype');
 }
 
 /* animation */
@@ -56,38 +56,38 @@
 /* body styles */
 body {
     /* background */
-    background: url('assets/bg.svg') no-repeat center center fixed;
+    background: url('/assets/bg.svg') no-repeat center center fixed;
     background-size: cover;
     height: 100vh;
     margin: 0;
+    overflow: hidden;
     /* text */
-    color: white;
+    color:black;
     font-family: 'qanect', sans-serif;
     font-size: 5vh;
     display: flex;
-    justify-content: last baseline;
+    justify-content:center;
+
     /* cursor */
     /*cursor: none;*/
 }
 
 /* header styles */
 header {
-    position: absolute;
     text-align: center;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items:first baseline;
     height: 100vh;
     position: relative;
     z-index: 1;
+    color: aliceblue;
 }
 
 header h1 {
     font-family: 'theatrical', sans-serif;
     font-size: 15vh;
-    margin: 0;
-    margin-left:50vh;
-    margin-right: 50vh;
+    margin: 10vh;
     font-weight: normal;
     animation-name: fadeUp;
     animation-duration: 2s;
@@ -95,8 +95,8 @@ header h1 {
     animation-delay: 1s;
     animation-fill-mode: forwards;
     opacity: 0; /* start as hidden */
-    /* glow + shadow*/
-/*    animation-name: neonShadowFlicker;
+    /* glow + shadow
+    animation-name: neonShadowFlicker;
     animation-duration: 3s;
     animation-timing-function:steps(1);
     animation-fill-mode: forwards;
@@ -104,14 +104,6 @@ header h1 {
     animation-direction: alternate;*/
 }
 
-.jewel {
-    position: inherit;
-    width: 15vh;
-}
-
-.lefty {
-    margin-left: 10vh;
-}
 
 section {
     position: absolute;
@@ -124,7 +116,7 @@ section {
 /* all stars */
 .star {
     position: absolute;
-    width: 40vh;
+    width: 10vh;
     animation-name: starFlicker;
     animation-duration: 6s;
     animation-timing-function: ease-in-out;
@@ -137,7 +129,7 @@ section {
     top: 10vh;
     left: 15vh;
 }
-.top-right {
+/*.top-right {
     top: 10vh;
     right: 15vh;
     animation-delay: 2s;
@@ -151,7 +143,7 @@ section {
     bottom: 10vh;
     right: 15vh;
     animation-delay: 6s;
-}
+}*/
 
 
 /* hovering over stars */
