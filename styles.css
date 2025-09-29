@@ -80,14 +80,14 @@ header {
     height: 100vh;
     position: relative;
     z-index: 1;
+    margin: auto;
 }
 
 header h1 {
     font-family: 'theatrical', sans-serif;
     font-size: 15vh;
-    margin: 0;
-    margin-left:50vh;
-    margin-right: 50vh;
+    display: flex;
+    justify-content: center;
     font-weight: normal;
     animation-name: fadeUp;
     animation-duration: 2s;
@@ -104,13 +104,27 @@ header h1 {
     animation-direction: alternate;*/
 }
 
+/* keeping this in case jewel rendering bug reappears later
+canvas {
+  width: 15vh;
+  height: 15vh;
+  image-rendering: pixelated;
+} */
+
 .jewel {
     position: inherit;
-    width: 15vh;
+    width: 10vh;
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
 }
 
 .lefty {
-    margin-left: 10vh;
+    margin: 10vh;
+}
+
+.righty {
+    margin: 10vh;
 }
 
 section {
