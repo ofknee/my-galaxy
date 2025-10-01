@@ -60,7 +60,7 @@
 /* body styles */
 body {
     /* background */
-    background: url('/assets/bg.svg') no-repeat center center fixed;
+    background: url('/assets/bg.svg') center center fixed;
     background-size: cover;
     height: 100vh;
     margin-top: 0;
@@ -92,6 +92,7 @@ header h1 {
     margin-right: 3vh;
     color: rgb(255, 255, 255);
     padding: 5vh;
+    padding-top: 6vh;
     /* shadow */
     text-shadow: 0vh 0vh 1.5vh rgb(134, 83, 220);
     font-weight: normal;
@@ -124,7 +125,8 @@ p {
     border-color: antiquewhite;
     border-width: 0.5vh;  */
     margin: 2vh;
-    padding: 5vh
+    padding: 5vh;
+    padding-top: 6vh;
 }
 
 /* hovering over stars */
@@ -144,7 +146,7 @@ p {
 
 .line-list {
     width: 100%;
-    padding-top: 0vh;
+    padding-top: 30vh;
     padding-bottom: 0vh;
     padding-left: 7vh;
     padding-right: 0vh;
