@@ -28,9 +28,15 @@
 
 @keyframes starFlicker {
     0% { 
-        opacity: 1 ; 
+        opacity: 0; 
+        scale: 0.9;
+    }
+
+    35% { 
+        opacity: 0.8; 
         scale: 1;
     } 
+
     100% { 
         opacity: 0; 
         scale: 0.9;
@@ -88,8 +94,8 @@ header {
 header h1 {
     font-family: 'qanect', sans-serif;
     font-size: 9vh;
-    margin-top: 0;
-    margin-right: 3vh;
+    margin-top: 3vh;
+    margin-right: 7vh;
     color: rgb(255, 255, 255);
     padding: 5vh;
     padding-top: 6vh;
@@ -104,18 +110,28 @@ header h1 {
     opacity: 0; 
 }
 
+.main {
+    margin-top: 10vh;
+    margin-left: 12vh;
+    width: 60vw;
+    font-size: 3vh;
+    line-height: 1.7;
+    font-family: 'braven', sans-serif;
+}
 
 p {
     z-index: 2;
-    font-size: 5vh;
+    font-size: 2vh;
     color   : rgb(58, 89, 163);
     /* border-style: solid;
     border-color: antiquewhite;
     border-width: 0.5px; */
     line-height: 1.7 ;
     padding-left: 7vh;
-    padding-bottom: 3vh;
-
+    padding-bottom: 5vh;
+    margin-bottom: 4vh;
+    display: flex;
+    justify-content: center;
 }
 /* all stars */
 .star {
@@ -124,7 +140,7 @@ p {
     /* border-style: solid;
     border-color: antiquewhite;
     border-width: 0.5vh;  */
-    margin: 2vh;
+    margin: 5vh;
     padding: 5vh;
     padding-top: 6vh;
 }
@@ -143,6 +159,64 @@ p {
     image-rendering: -moz-crisp-edges;
     image-rendering: crisp-edges;
 }
+
+/* footer (why does it take so much css omg) */
+
+footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 2.5vh;
+    color: rgb(195, 220, 232);
+    padding-left: 3vh;
+    padding-right: 3vh;
+    padding-bottom: 7vh;
+    font-family: 'braven', sans-serif;
+}
+
+.footer-decoration {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3vh;
+    gap: 2vh;
+}
+
+.footer-star {
+    width: 3vh;
+    height: 3vh;
+    opacity: 0.6;
+    animation: starFlicker 3s infinite;
+}
+
+.footer-star:nth-child(3) { /* children go from 1-5 including lines */
+    animation-delay: 2s;
+}
+
+footer b {/* b == bolded part of footer == the text */ 
+    text-shadow: 0.1vh 0.1vh 0.3vh black;
+
+}
+
+.footer-line {
+    width: 20vh;
+    height: 1px;
+    background: linear-gradient(90deg, transparent 0%, royalblue, transparent 100%);
+    margin: 0 2vh;
+}
+
+.footer-subtitle {
+    font-size: 2vh;
+    color: rgba(195, 220, 232, 0.7);
+    margin-top: 1vh;
+    font-style: italic;
+}
+
+
+/* saving this for later use */
+
+/*
 
 .line-list {
     width: 100%;
@@ -175,3 +249,5 @@ p {
     margin-left: 3vh;
     margin-right: -2vh;
 }
+
+*/
