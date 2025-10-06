@@ -1,11 +1,15 @@
 /* fonts */
 @font-face {
   font-family: 'theatrical';
-  src: url('assets/theatrical.otf') format('opentype');
+  src: url('./assets/theatrical.otf') format('opentype');
 }
 @font-face {
   font-family: 'qanect';
-  src: url('assets/qanect.otf') format('opentype');
+  src: url('./assets/qanect.otf') format('opentype');
+}
+@font-face {
+    font-family: 'braven';
+    src: url('./assets/braven.otf') format('opentype');
 }
 
 
@@ -24,13 +28,29 @@
   }
 }
 
-@keyframes starFlicker {
+@keyframes starFlicker1 {
     0% { 
         opacity: 1 ; 
         scale: 1;
     } 
     100% { 
         opacity: 0; 
+        scale: 0.9;
+    }
+}
+
+
+@keyframes starFlicker2 {
+    0% { 
+        opacity: 0.4; 
+        scale: 0.7;
+    } 
+    35% {
+        opacity: 0.8;
+        scale: 1;
+    }
+    100% { 
+        opacity: 0.2; 
         scale: 0.9;
     }
 }
@@ -122,7 +142,7 @@ section {
 .star {
     position: absolute;
     width: 20vw;
-    animation-name: starFlicker;
+    animation-name: starFlicker1;
     animation-duration: 6s;
     animation-timing-function: ease-in-out;
     animation-iteration-count: infinite;
@@ -156,12 +176,72 @@ section {
     animation: hoverStar 1s infinite;
 } 
 
-.contact {
+
+/* footer */
+
+footer {
     position: absolute;
     bottom: 0;
+    width: 100vw;
+    text-align: center;
+    font-size: 2.5vh;
+    color: rgb(195,220,232);
+    padding-bottom: 8vh;               /*hi*/
+    font-family: 'braven', sans-serif;
+}
+
+.footer-decoration {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2vh;
+}
+
+.footer-star {
+    width: 2.5vh;
+    height: 2.5vh;
+    opacity: 0.6;
+    animation: starFlicker2 3s infinite;
+}
+
+.footer-star:nth-child(3) {
+    animation-delay: 1.5s;
+}
+
+.footer-line {
+    width: 10vh;
+    height: 1px;
+    background: linear-gradient(90deg, transparent 0%, royalblue, transparent 100%);
+    margin-top: 0vh;
+    margin-bottom: 0vh;
+    margin-right: 1vh;
+    margin-left: 1vh;
+}
+
+footer b {
+    text-shadow: 0.1vh 0.1vh 0.3vh black;
+    font-size: 2vh;
+}
+
+.footer-subtitle {
+    font-size: 2vh;
+    color: rgba(195, 220, 232, 0.7);
+    margin-top: 2vh;
+    font-style: italic;
+    text-shadow: 0.0vh 0.2vh 0.5vh black;
+
+}
+
+
+
+/*
+.contact {
+    position: absolute;
+    bottom: 3vh;
     right: 0;
     border-radius: 1vh;
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.3));
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, rgba(183, 29, 255, 0.1), rgba(61, 113, 255, 0.03));
     backdrop-filter: blur(10px);}
 
 
@@ -169,3 +249,4 @@ section {
     width: 4vh;
     height: 4vh;
 }
+*/
