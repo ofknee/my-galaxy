@@ -1,15 +1,15 @@
 /* fonts */
 @font-face {
   font-family: 'theatrical';
-  src: url('./assets/theatrical.otf') format('opentype');
+  src: url('/assets/theatrical.otf') format('opentype');
 }
 @font-face {
   font-family: 'qanect';
-  src: url('./assets/qanect.otf') format('opentype');
+  src: url('/assets/qanect.otf') format('opentype');
 }
 @font-face {
     font-family: 'braven';
-    src: url('./assets/braven.otf') format('opentype');
+    src: url('/assets/braven.otf') format('opentype');
 }
 
 /* animation */
@@ -26,19 +26,9 @@
   }
 }
 
-@keyframes opacityBasic {
-    from {opacity:0;}
-    to {opacity:1;}
-}
-
 @keyframes starFlicker {
     0% { 
-        opacity: 0; 
-        scale: 0.9;
-    }
-
-    35% { 
-        opacity: 0.8; 
+        opacity: 1 ; 
         scale: 1;
     } 
 
@@ -71,7 +61,7 @@
 /* body styles */
 body {
     /* background */
-    background: url('./assets/bg.svg') repeat center center fixed;
+    background: url('/assets/bg.svg') center center fixed;
     background-size: cover;
     height: 100vh;
     margin-top: 0;
@@ -81,7 +71,7 @@ body {
     /* text */
     color:rgb(195, 220, 232);
     font-family: 'braven', sans-serif;
-    font-size: 5vh;
+    font-size: 4vh;
 }
 
 /* header styles */
@@ -99,8 +89,8 @@ header {
 header h1 {
     font-family: 'qanect', sans-serif;
     font-size: 9vh;
-    margin-top: 3vh;
-    margin-right: 7vh;
+    margin-top: 0;
+    margin-right: 3vh;
     color: rgb(255, 255, 255);
     padding: 5vh;
     padding-top: 6vh;
@@ -115,30 +105,20 @@ header h1 {
     opacity: 0; 
 }
 
-.main {
-    margin-top: 10vh;
-    margin-left: 12vh;
-    width: 60vw;
-    font-size: 3vh;
-    line-height: 1.7;
-    font-family: 'braven', sans-serif;
-    color:rgb(195, 220, 232);
-    animation: opacityBasic 3s ease-in 0.2s forwards;
-}
 
 p {
     z-index: 2;
-    font-size: 2vh;
+    font-size: 4vh;
     color   : rgb(58, 89, 163);
     /* border-style: solid;
     border-color: antiquewhite;
     border-width: 0.5px; */
     line-height: 1.7 ;
     padding-left: 7vh;
-    padding-bottom: 5vh;
-    margin-bottom: 4vh;
-    display: flex;
-    justify-content: center;
+    padding-bottom: 3vh;
+
+
+
 }
 /* all stars */
 .star {
@@ -147,7 +127,7 @@ p {
     /* border-style: solid;
     border-color: antiquewhite;
     border-width: 0.5vh;  */
-    margin: 5vh;
+    margin: 2vh;
     padding: 5vh;
     padding-top: 6vh;
 }
@@ -167,70 +147,12 @@ p {
     image-rendering: crisp-edges;
 }
 
-/* footer (why does it take so much css omg) */
-
-footer {
-    position: relative;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
-    font-size: 2.5vh;
-    color: rgb(195, 220, 232);
-    padding-left: 3vh;
-    padding-right: 3vh;
-    padding-bottom: 7vh;
-    font-family: 'braven', sans-serif;
-}
-
-.footer-decoration {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 3vh;
-    gap: 2vh;
-}
-
-.footer-star {
-    width: 3vh;
-    height: 3vh;
-    opacity: 0.6;
-    animation: starFlicker 3s infinite;
-}
-
-.footer-star:nth-child(3) { /* children go from 1-5 including lines */
-    animation-delay: 2s;
-}
-
-footer b {/* b == bolded part of footer == the text */ 
-    text-shadow: 0.1vh 0.1vh 0.3vh black;
-
-}
-
-.footer-line {
-    width: 20vh;
-    height: 1px;
-    background: linear-gradient(90deg, transparent 0%, royalblue, transparent 100%);
-    margin: 0 2vh;
-}
-
-.footer-subtitle {
-    font-size: 2vh;
-    color: rgba(195, 220, 232, 0.7);
-    margin-top: 1vh;
-    font-style: italic;
-
-}
-
-
-/* saving this for later use */
-
-/*
 
 .line-list {
     width: 100%;
-    padding-top: 30vh;
+    padding-top: 20vh;
     padding-bottom: 0vh;
-    padding-left: 7vh;
+    padding-left: 5vh;
     padding-right: 0vh;
     margin-right: 0vh;
     display: flex;
@@ -238,7 +160,7 @@ footer b {/* b == bolded part of footer == the text */
     gap: 2vh;
     box-sizing: border-box;
     z-index: 2;
-    font-size: 6vh;
+    font-size: 5vh;
     color: rgb(188, 206, 247);
     line-height: 1.7;
 }
@@ -258,4 +180,11 @@ footer b {/* b == bolded part of footer == the text */
     margin-right: -2vh;
 }
 
-*/
+.store-name {
+    font-family: 'theatrical', sans-serif;
+    font-size: 6vh;
+    color: rgb(211, 234, 240);
+    text-shadow: 0.2vh 0.2vh 0.3vh black;
+    margin-top: 4vh;
+    margin-bottom: 2vh;
+}

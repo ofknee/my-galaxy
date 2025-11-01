@@ -18,7 +18,7 @@
 @keyframes fadeUp {
   from { 
     opacity: 0; 
-    transform: translateY(70px); 
+    transform: translateY(20vh); 
     filter: blur(10px) drop-shadow(0px 0px 0px black);
   }
   to { 
@@ -75,6 +75,20 @@
             0px 0px 5px rgb(108, 63, 234); 
     }
 }
+
+@keyframes subtitle {
+    from {
+        opacity:0;
+        filter:brightness(0);
+        transform: translateY(-10vh)
+    }
+    to {
+        opacity: 1;
+        filter:brightness(1);
+        transform: translate3d(0)
+    }
+}
+
 /* body styles */
 body {
     /* background */
@@ -114,8 +128,9 @@ header h1 {
     font-weight: normal;
     animation-name: fadeUp;
     animation-duration: 2s;
-    animation-timing-function: ease-in-out;
+    animation-timing-function:  cubic-bezier(0.39, 0.575, 0.565, 1);
     animation-fill-mode: forwards;
+    animation-delay: 1s;
     opacity: 0; 
     text-shadow: 0px 0px 14px rgb(64, 4, 230); 
     text-shadow: 0px 0px 9px rgb(141, 99, 246);
@@ -181,13 +196,19 @@ section {
 
 footer {
     position: absolute;
-    bottom: 0;
+    bottom: 10vh;
     width: 100vw;
     text-align: center;
     font-size: 2.5vh;
-    color: rgb(195,220,232);
+    color: rgb(198, 230, 245);
     padding-bottom: 8vh;               /*hi*/
     font-family: 'braven', sans-serif;
+    
+
+    /* animation */
+    animation-name: subtitle;
+    animation-duration: 2s;
+    animation-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1);
 }
 
 .footer-decoration {
@@ -219,7 +240,7 @@ footer {
 }
 
 footer b {
-    text-shadow: 0.1vh 0.1vh 0.3vh black;
+    text-shadow: 0.1vh 0.1vh 0.1vh black;
     font-size: 2vh;
 }
 
@@ -228,7 +249,7 @@ footer b {
     color: rgba(195, 220, 232, 0.7);
     margin-top: 2vh;
     font-style: italic;
-    text-shadow: 0.0vh 0.2vh 0.5vh black;
+    text-shadow: 0.0vh 0.2vh 0.2vh black;
 
 }
 
