@@ -61,7 +61,7 @@
 /* body styles */
 body {
     /* background */
-    background: url('/assets/bg.svg') center center fixed;
+    background: url('./assets/bg.svg') center center fixed;
     background-size: cover;
     height: 100vh;
     margin-top: 0;
