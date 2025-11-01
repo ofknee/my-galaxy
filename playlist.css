@@ -1,15 +1,15 @@
 /* fonts */
 @font-face {
   font-family: 'theatrical';
-  src: url('/assets/theatrical.otf') format('opentype');
+  src: url('./assets/theatrical.otf') format('opentype');
 }
 @font-face {
   font-family: 'qanect';
-  src: url('/assets/qanect.otf') format('opentype');
+  src: url('./assets/qanect.otf') format('opentype');
 }
 @font-face {
     font-family: 'braven';
-    src: url('/assets/braven.otf') format('opentype');
+    src: url('./assets/braven.otf') format('opentype');
 }
 
 /* animation */
