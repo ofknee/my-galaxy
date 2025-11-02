@@ -77,6 +77,8 @@ body {
     margin-top: 0;
     overflow-y:  scroll;
     overflow-x: hidden;
+    background-color: rgb(19, 10, 103);
+
 
     /* text */
     color:rgb(195, 220, 232);
